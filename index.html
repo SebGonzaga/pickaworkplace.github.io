@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pick A Name Studio</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800&display=swap">
+<link rel="stylesheet" href="css/base.css">
+<style id="rt-css"></style>
+<link rel="stylesheet" href="css/editor.css">
+</head><body>
+<header>
+ <span class="logo">✦ Pick A Name Studio</span><input id="nm">
+ <button id="un" title="Undo (Ctrl+Z)">↶</button><button id="re" title="Redo (Ctrl+Y)">↷</button><span id="sv" class="mu"></span>
+ <span class="sp"></span>
+ <span class="seg"><button id="zo" title="Zoom out">−</button><button id="zr" title="Reset zoom (Ctrl+scroll to zoom)">100%</button><button id="zi" title="Zoom in">+</button></span>
+ <span class="seg"><button data-m="edit" class="on">Edit</button><button data-m="d">Desktop</button><button data-m="t">Tablet</button><button data-m="m">Mobile</button></span>
+ <button id="tp">▦ Templates</button><button id="pr">⛶ Present</button><button id="ex" class="go">Export ZIP</button>
+</header>
+<main><aside id="L"></aside><section id="C"><div id="sw"><div id="st"></div></div><div id="pv" hidden><iframe id="fr"></iframe></div><div id="hint"></div></section><aside id="P"></aside></main>
+<footer id="B"></footer>
+<div id="tg" hidden><div><span class="seg"><b style="flex:1;font-size:16px">Template library</b><button id="tx">✕</button></span><p class="mu">Choosing a template replaces the current project. Undo (Ctrl+Z) brings it back.</p><input id="tq" placeholder="Search templates…" style="width:100%;box-sizing:border-box;background:#14141f;border:1px solid #3a3a55;border-radius:6px;padding:7px"><div class="tgr" id="tgr"></div></div></div>
+<input type="file" id="fi" accept="image/*" hidden>
+<script src="js/runtime-styles.js"></script>
+<script src="js/core.js"></script>
+<script src="js/render.js"></script>
+<script src="js/runtime.js"></script>
+<script src="js/state.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/events.js"></script>
+<script src="js/export.js"></script>
+<script src="js/templates.js"></script>
+<script src="js/tools.js"></script>
+<script src="js/main.js"></script>
+</body></html>

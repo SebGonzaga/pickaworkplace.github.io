@@ -1,0 +1,12 @@
+/* Element rendering shared by editor and runtime */
+function inner(e){var t=e.type;if(t==='decor'){var em=DK[e.kind]||DK.hearts,n=Math.min(40,+e.n||12),s='';for(var i=0;i<n;i++)s+='<span class="pt" style="left:'+(i*37%96)+'%;animation-duration:'+((6+(i*13%7))/(+e.sp||1))+'s;animation-delay:-'+(i*17%9)+'s;font-size:'+(16+(i*11%20))+'px">'+em[i%em.length]+'</span>';return '<div class="dc'+(DU[e.kind||'hearts']?' up':'')+'">'+s+'</div>'}if(t==='quiz')return '<div class="qz" data-qs="'+esc(e.text)+'" style="background:'+e.fill+';color:'+e.color+'"></div>';
+ if(t==='text')return '<div class="t" style="color:'+e.color+';font-weight:'+e.fw+';text-align:'+e.al+'">'+esc(e.text)+'</div>';
+ if(t==='button')return '<a class="btn" style="background:'+e.fill+';color:'+e.color+';border-radius:'+e.radius+'px">'+esc(e.text)+'</a>';
+ if(t==='shape')return '<div class="sh" style="background:'+e.fill+';border-radius:'+e.radius+'px"></div>';
+ if(t==='image')return '<img class="im" alt="" src="'+SRC(e.src)+'" style="border-radius:'+e.radius+'px">';
+ return (CH[t]||ROBOT)(e.fill)}
+function wrap(e,rt,z,sel,hd){if(e.hid&&rt)return '';var tx=e.type==='text'||e.type==='button'||e.type==='quiz';
+ var st=rt?'left:'+(e.x/9.6)+'%;top:'+(e.y/5.4)+'%;width:'+(e.w/9.6)+'%;height:'+(e.h/5.4)+'%;font-size:'+(e.fs/9.6)+'cqw;'
+  :'left:'+e.x+'px;top:'+e.y+'px;width:'+e.w+'px;height:'+e.h+'px;font-size:'+e.fs+'px;';
+ st+='transform:rotate('+e.rot+'deg);opacity:'+(e.hid&&!rt?.15:e.op)+';z-index:'+z+';--fs:'+e.fs+';--w:'+e.w+';--ar:'+e.w+'/'+e.h+';--dl:'+(e.delay||0)+'s';
+ return '<div class="el a-'+e.anim+(tx?'':' nt')+(CH[e.type]?' chr':'')+(e.type==='decor'?' dec':'')+(rt&&e.enter&&e.enter!=='none'?' en-'+e.enter:'')+(e.hov&&e.hov!=='none'?' hv-'+e.hov:'')+(e.hm==='yes'?' hm':'')+(e.ht==='yes'?' ht':'')+(sel?' sel':'')+'" data-id="'+e.id+'"'+(e.click!=='none'?' data-click="'+e.click+'"':'')+(e.drag&&e.drag!=='none'?' data-drag="'+e.drag+'"':'')+(e.size==='yes'?' data-size="1"':'')+(e.click==='speech'||e.click==='popup'||e.click==='link'?' data-msg="'+esc(e.msg)+'"':'')+' style="'+st+'"><div class="fx">'+inner(e)+'</div>'+(e.size==='yes'?'<i class="rz"></i>':'')+(e.click==='speech'?'<div class="bub"></div>':'')+(hd&&!e.lock?'<i class="hd" data-h="se"></i><i class="hd nw" data-h="nw"></i><i class="hd ne" data-h="ne"></i><i class="hd sw" data-h="sw"></i><i class="hd r" data-h="r"></i>':'')+'</div>'}
