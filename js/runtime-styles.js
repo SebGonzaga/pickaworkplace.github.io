@@ -38,5 +38,21 @@ var RT_STYLES=`.el{position:absolute;box-sizing:border-box}.fx{width:100%;height
 .a-wave .fx{animation:wave 2.4s ease-in-out infinite;transform-origin:50% 100%}
 .en-rotate{animation-name:erot}@keyframes erot{from{opacity:0;rotate:-360deg}}
 .en-scale{animation-name:escl}@keyframes escl{from{opacity:0;scale:.6}}
+.ex-fade{animation-name:xfade;animation-duration:.5s;animation-fill-mode:forwards;animation-timing-function:ease-in}@keyframes xfade{to{opacity:0}}
+.ex-slide{animation-name:xslide;animation-duration:.5s;animation-fill-mode:forwards;animation-timing-function:ease-in}@keyframes xslide{to{opacity:0;translate:0 -80px}}
+.ex-shrink{animation-name:xshr;animation-duration:.4s;animation-fill-mode:forwards}@keyframes xshr{to{opacity:0;scale:.1}}
+.ex-zoom{animation-name:xzoom;animation-duration:.5s;animation-fill-mode:forwards}@keyframes xzoom{to{opacity:0;scale:1.6}}
+.ex-rotate{animation-name:xrot;animation-duration:.6s;animation-fill-mode:forwards}@keyframes xrot{to{opacity:0;rotate:360deg;scale:.2}}
+.gone{display:none!important}
+.hv-wave .fx{transform-origin:50% 100%}.hv-wave:hover .fx{animation:wave 1s ease-in-out infinite}
+.hv-grow .fx{transition:transform .2s}.hv-grow:hover .fx{transform:scale(1.1)}
+.hv-speech:hover .bub{display:block}
+.slide.on.tr-fade{animation:trfade .6s ease both}@keyframes trfade{from{opacity:0}}
+.slide.on.tr-slide{animation:trslide .6s cubic-bezier(.2,.8,.2,1) both}@keyframes trslide{from{opacity:0;transform:translateX(60px)}}
+.slide.on.tr-zoom{animation:trzoom .6s cubic-bezier(.2,.9,.3,1.2) both}@keyframes trzoom{from{opacity:0;transform:scale(.85)}}
+.slide.on.tr-flip{animation:trflip .7s ease both}@keyframes trflip{from{opacity:0;transform:perspective(900px) rotateY(-80deg)}}
+@media(max-width:767px){.slide[class*="tr-"]{animation:none!important}}
+.ch{width:100%;display:flex;flex-direction:column;justify-content:center;gap:.6em}.cr{display:grid;grid-template-columns:28% 1fr 12%;align-items:center;gap:.6em}.cb{height:1em;border-radius:99px;background:#ffffff22;overflow:hidden}.cb i{display:block;height:100%;border-radius:99px}.cr b{text-align:right}
+.tbl{width:100%;border-collapse:collapse;font-size:inherit}.tbl th,.tbl td{padding:.35em .6em;border-bottom:1px solid #ffffff33;text-align:left}.tbl th{color:#fff}
 `;
 document.getElementById("rt-css").textContent=RT_STYLES;

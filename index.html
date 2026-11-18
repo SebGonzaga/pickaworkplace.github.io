@@ -14,11 +14,11 @@
  <span class="sp"></span>
  <span class="seg"><button id="zo" title="Zoom out">−</button><button id="zr" title="Reset zoom (Ctrl+scroll to zoom)">100%</button><button id="zi" title="Zoom in">+</button></span>
  <span class="seg"><button data-m="edit" class="on">Edit</button><button data-m="d">Desktop</button><button data-m="t">Tablet</button><button data-m="m">Mobile</button></span>
- <button id="tp">▦ Templates</button><button id="pr">⛶ Present</button><button id="ex" class="go">Export ZIP</button>
+ <button id="tp">▦ Templates</button><button id="pr">⛶ Present</button><button id="th" title="Switch light / dark mode" aria-label="Switch light or dark mode">☀</button><button id="ex" class="go">Export ZIP</button>
 </header>
 <main><aside id="L"></aside><section id="C"><div id="sw"><div id="st"></div></div><div id="pv" hidden><iframe id="fr"></iframe></div><div id="hint"></div></section><aside id="P"></aside></main>
 <footer id="B"></footer>
-<div id="tg" hidden><div><span class="seg"><b style="flex:1;font-size:16px">Template library</b><button id="tx">✕</button></span><p class="mu">Choosing a template replaces the current project. Undo (Ctrl+Z) brings it back.</p><input id="tq" placeholder="Search templates…" style="width:100%;box-sizing:border-box;background:#14141f;border:1px solid #3a3a55;border-radius:6px;padding:7px"><div class="tgr" id="tgr"></div></div></div>
+<div id="tg" hidden><div><span class="seg"><b style="flex:1;font-size:16px">Template library</b><button id="tx">✕</button></span><p class="mu">Choosing a template replaces the current project. Undo (Ctrl+Z) brings it back.</p><input id="tq" placeholder="Search templates…" style="width:100%;box-sizing:border-box;background:var(--field);border:1px solid var(--line2);border-radius:6px;padding:7px"><div class="tgr" id="tgr"></div></div></div>
 <input type="file" id="fi" accept="image/*" hidden>
 <script src="js/runtime-styles.js"></script>
 <script src="js/core.js"></script>
@@ -30,6 +30,7 @@
 <script src="js/events.js"></script>
 <script src="js/export.js"></script>
 <script src="js/templates.js"></script>
+<script src="js/templates2.js"></script>
 <script src="js/tools.js"></script>
 <script src="js/main.js"></script>
 </body></html>
