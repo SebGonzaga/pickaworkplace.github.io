@@ -17,4 +17,22 @@ Exit presets (fade/slide/shrink/zoom/rotate, triggered by 'On click: Exit') and 
 
 ## Tests
 - `node tests/run.js`: syntax, template bounds, rendering and export output (no browser needed).
+- `node tests/export-check.js`: exports the default project, a feature project and all 36 templates, then checks HTML structure, file references, offline behaviour (only Google Fonts is remote), CSS, JavaScript and assets.
 - `tests/ui.spec.js`: Playwright browser tests. Not run yet; see the setup comment at the top of the file.
+
+## Editor helpers (js/pro.js)
+- Snap toggle (header): dragged objects snap to an 8px grid.
+- Recent colours: the last 8 colours used appear first in swatch rows.
+- Layers: ▲/▼ move an object forward or backward; double-click a layer to rename it.
+- Shortcuts: press ? or the header ? button. Esc closes it.
+- Layers can be dragged onto another layer to reorder them.
+- Hold Space and drag on the canvas to pan.
+
+## Animation library
+- Slide transitions: fade, slide, zoom, flip, wipe, iris, cube, blur, drop, shutter, flash, swing, spiral, up. Use Preview transition in the slide panel to play one on the canvas.
+- Entrances: fade, slide, zoom, rise, bounce, flip, turn, rotate, scale, pop, spin, drop, blur, reveal, glitch.
+- Loops: float, pulse, spin, bounce, wobble, dance, walk, swing, glow, shake, wave, breathe, bob, hue, flicker.
+- Hover: jump, wiggle, wave, grow, speech bubble, tilt, lift.
+
+## Magic Move (slide morphing)
+Give an object a Magic Move key (Animation section of its properties). An object with the same key on the next slide glides from its old position and size into the new one while the slides change. Respects the reduced-motion setting. The "Magic Move Showcase" template demonstrates it.

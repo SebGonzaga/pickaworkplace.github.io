@@ -47,12 +47,34 @@ var RT_STYLES=`.el{position:absolute;box-sizing:border-box}.fx{width:100%;height
 .hv-wave .fx{transform-origin:50% 100%}.hv-wave:hover .fx{animation:wave 1s ease-in-out infinite}
 .hv-grow .fx{transition:transform .2s}.hv-grow:hover .fx{transform:scale(1.1)}
 .hv-speech:hover .bub{display:block}
-.slide.on.tr-fade{animation:trfade .6s ease both}@keyframes trfade{from{opacity:0}}
-.slide.on.tr-slide{animation:trslide .6s cubic-bezier(.2,.8,.2,1) both}@keyframes trslide{from{opacity:0;transform:translateX(60px)}}
-.slide.on.tr-zoom{animation:trzoom .6s cubic-bezier(.2,.9,.3,1.2) both}@keyframes trzoom{from{opacity:0;transform:scale(.85)}}
-.slide.on.tr-flip{animation:trflip .7s ease both}@keyframes trflip{from{opacity:0;transform:perspective(900px) rotateY(-80deg)}}
+.slide.on.tr-fade,.tpv.tr-fade{animation:trfade .6s ease both}@keyframes trfade{from{opacity:0}}
+.slide.on.tr-slide,.tpv.tr-slide{animation:trslide .6s cubic-bezier(.2,.8,.2,1) both}@keyframes trslide{from{opacity:0;transform:translateX(60px)}}
+.slide.on.tr-zoom,.tpv.tr-zoom{animation:trzoom .6s cubic-bezier(.2,.9,.3,1.2) both}@keyframes trzoom{from{opacity:0;transform:scale(.85)}}
+.slide.on.tr-flip,.tpv.tr-flip{animation:trflip .7s ease both}@keyframes trflip{from{opacity:0;transform:perspective(900px) rotateY(-80deg)}}
 @media(max-width:767px){.slide[class*="tr-"]{animation:none!important}}
 .ch{width:100%;display:flex;flex-direction:column;justify-content:center;gap:.6em}.cr{display:grid;grid-template-columns:28% 1fr 12%;align-items:center;gap:.6em}.cb{height:1em;border-radius:99px;background:#ffffff22;overflow:hidden}.cb i{display:block;height:100%;border-radius:99px}.cr b{text-align:right}
 .tbl{width:100%;border-collapse:collapse;font-size:inherit}.tbl th,.tbl td{padding:.35em .6em;border-bottom:1px solid #ffffff33;text-align:left}.tbl th{color:#fff}
+.slide.on.tr-wipe,.tpv.tr-wipe{animation:trwipe .8s ease both}@keyframes trwipe{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+.slide.on.tr-iris,.tpv.tr-iris{animation:triris .9s ease both}@keyframes triris{from{clip-path:circle(0% at 50% 50%)}to{clip-path:circle(75% at 50% 50%)}}
+.slide.on.tr-cube,.tpv.tr-cube{animation:trcube .8s cubic-bezier(.2,.8,.2,1) both;transform-origin:0 50%}@keyframes trcube{from{opacity:0;transform:perspective(1200px) rotateY(90deg)}to{opacity:1;transform:perspective(1200px) rotateY(0)}}
+.slide.on.tr-blur,.tpv.tr-blur{animation:trblur .7s ease both}@keyframes trblur{from{opacity:0;filter:blur(18px)}to{opacity:1;filter:blur(0)}}
+.slide.on.tr-drop,.tpv.tr-drop{animation:trdrop .8s cubic-bezier(.3,1.4,.5,1) both}@keyframes trdrop{from{opacity:0;transform:translateY(-100%)}}
+.slide.on.tr-shutter,.tpv.tr-shutter{animation:trshut .8s ease both}@keyframes trshut{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0 0 0 0)}}
+.en-pop{animation-name:epop;animation-timing-function:cubic-bezier(.2,.9,.3,1.3)}@keyframes epop{0%{opacity:0;scale:.2}60%{opacity:1;scale:1.12}100%{scale:1}}
+.en-spin{animation-name:espin}@keyframes espin{from{opacity:0;rotate:-720deg;scale:0}}
+.en-drop{animation-name:edrop;animation-timing-function:cubic-bezier(.3,1.4,.5,1)}@keyframes edrop{from{opacity:0;translate:0 -220px}}
+.en-blur{animation-name:eblur}@keyframes eblur{from{opacity:0;filter:blur(14px)}}
+.en-reveal{animation-name:ereveal}@keyframes ereveal{from{clip-path:inset(0 100% 0 0)}}
+.en-glitch{animation-name:eglitch}@keyframes eglitch{0%{opacity:0;translate:-10px 0}20%{opacity:1;translate:10px 0}40%{translate:-6px 0}60%{translate:6px 0}80%{translate:-2px 0}100%{translate:0}}
+.a-breathe .fx{animation:kbreath 3s ease-in-out infinite}@keyframes kbreath{50%{scale:1.08}}
+.a-bob .fx{animation:kbob 2.2s ease-in-out infinite}@keyframes kbob{50%{translate:0 -14px}}
+.a-hue .fx{animation:khue 5s linear infinite}@keyframes khue{to{filter:hue-rotate(360deg)}}
+.a-flicker .fx{animation:kflick 1.6s steps(2,end) infinite}@keyframes kflick{50%{opacity:.55}}
+.hv-tilt .fx{transition:transform .3s}.hv-tilt:hover .fx{transform:perspective(600px) rotateX(12deg) rotateY(-12deg)}
+.hv-lift .fx{transition:transform .25s,filter .25s}.hv-lift:hover .fx{transform:translateY(-8px);filter:drop-shadow(0 12px 12px #0005)}
+.slide.on.tr-flash,.tpv.tr-flash{animation:trflash .7s ease both}@keyframes trflash{0%{opacity:0;filter:brightness(3)}30%{opacity:1;filter:brightness(2)}100%{filter:brightness(1)}}
+.slide.on.tr-swing,.tpv.tr-swing{animation:trswing .9s cubic-bezier(.3,.9,.4,1) both;transform-origin:50% 0}@keyframes trswing{from{opacity:0;transform:rotate(-25deg) translateY(-30%)}to{opacity:1;transform:none}}
+.slide.on.tr-spiral,.tpv.tr-spiral{animation:trspiral 1s ease both}@keyframes trspiral{from{opacity:0;transform:rotate(-180deg) scale(.2)}to{opacity:1;transform:none}}
+.slide.on.tr-up,.tpv.tr-up{animation:trup .6s cubic-bezier(.2,.8,.2,1) both}@keyframes trup{from{opacity:0;transform:translateY(12%)}}
 `;
 document.getElementById("rt-css").textContent=RT_STYLES;

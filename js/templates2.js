@@ -108,3 +108,10 @@ TPL.push({n:'Summer Mood Board',cat:'Personal',d:'Playful collage of tilted card
  SLD('Palette','#2b2118','zoom',[TX('Palette',60,40,840,70,46,800,'#fdf0d5'),SH(60,160,170,260,'#ff9f8e',22),SH(260,160,170,260,'#8fd3ff',22),SH(460,160,170,260,'#b8e0a5',22),SH(660,160,170,260,'#ffd166',22),TX('#FF9F8E',60,440,170,40,20,700,'#fdf0d5',{al:'center'}),TX('#8FD3FF',260,440,170,40,20,700,'#fdf0d5',{al:'center'}),TX('#B8E0A5',460,440,170,40,20,700,'#fdf0d5',{al:'center'}),TX('#FFD166',660,440,170,40,20,700,'#fdf0d5',{al:'center'})]),
  SLD('Words','#fdf0d5','zoom',[TX('Words that inspire',60,40,840,70,46,800,'#2b2118'),TAB(60,150,840,300,'Calm | Slow mornings and soft light.\nBold | Bright colors, big ideas.\nFresh | Green walks and open windows.','#2b2118','#fdf0d5')])
 ]}}});
+
+/* 13 Magic Move Showcase: objects glide between slides (same Magic Move key on each slide) */
+TPL.push({n:'Magic Move Showcase',cat:'Marketing',d:'Objects glide, grow and travel between slides. Shows the Magic Move feature.',bg:'#0f172a',dark:1,ch:'robot',fill:'#f472b6',sub:'Objects glide between slides.',pts:[],qs:'',build:function(t){return{name:t.n,slides:[
+ SLD('Start','#0f172a','fade',[SH(80,120,220,220,'#f472b6',110,{mg:'hero'},'circle'),TX('Magic Move',360,160,520,100,72,800,'#ffffff',{mg:'title'}),TX('Objects glide between slides',360,270,520,60,26,500,'#94a3b8',{mg:'sub'}),BTN('Next ▶',360,380,180,'#f472b6','next','#0f172a')]),
+ SLD('Grow','#1e1b4b','fade',[SH(520,60,380,380,'#f472b6',190,{mg:'hero'},'circle'),TX('Move anything',60,300,440,100,64,800,'#ffffff',{mg:'title'}),TX('Same key, new place, new size.',60,400,440,50,24,500,'#c7d2fe',{mg:'sub'}),BTN('Next ▶',60,470,180,'#f472b6','next','#0f172a')]),
+ SLD('Your turn','#0f172a','fade',[SH(60,380,130,130,'#f472b6',65,{mg:'hero'},'circle'),TX('Your turn',230,360,640,100,64,800,'#ffffff',{mg:'title'}),TX('Give your own objects a key and watch them travel.',230,460,680,50,24,500,'#94a3b8',{mg:'sub'}),BTN('Back',60,40,180,'#334155','prev','#ffffff')])
+]}}});
