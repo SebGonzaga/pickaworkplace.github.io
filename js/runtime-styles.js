@@ -33,5 +33,10 @@ var RT_STYLES=`.el{position:absolute;box-sizing:border-box}.fx{width:100%;height
 .pb{width:100%;height:100%;border-radius:99px;overflow:hidden}.pb i{display:block;height:100%;border-radius:99px;transition:width 1.2s ease-out}.tb{width:100%;height:100%;border-radius:18px;padding:.6em;overflow:auto;display:flex;flex-direction:column;gap:.5em}.tbh{display:flex;gap:6px;flex-wrap:wrap}.tbh button{background:#ffffff22;color:inherit;border:0;border-radius:10px;padding:.4em .9em;font:inherit;font-weight:800;cursor:pointer;min-height:40px}.tbh button.on{background:#ffffff55}.tbp[hidden]{display:none}
 .en-bounce{animation-name:ebounce}.en-flip{animation-name:eflip}.en-turn{animation-name:eturn}@keyframes ebounce{0%{opacity:0;translate:0 -140px}55%{opacity:1;translate:0 18px}75%{translate:0 -10px}100%{translate:0 0}}@keyframes eflip{from{opacity:0;scale:0 1}}@keyframes eturn{from{opacity:0;rotate:-180deg;scale:.3}}
 .pop{position:fixed;inset:0;background:#000a;display:grid;place-items:center;z-index:1000}.pop>div{background:#fff;color:#222;border-radius:20px;padding:22px 26px;max-width:min(420px,90vw);font:700 18px/1.4 Nunito,system-ui,sans-serif;text-align:center}.pop button{margin-top:10px;background:#7c6cff;color:#fff;border:0;border-radius:12px;padding:10px 20px;font:inherit;cursor:pointer;min-height:44px}
+.a-glow .fx{animation:kglow 2.4s ease-in-out infinite}@keyframes kglow{50%{filter:drop-shadow(0 0 14px #ffd93dcc) brightness(1.15)}}
+.a-shake .fx{animation:kshake .5s linear infinite}@keyframes kshake{25%{transform:translate(-2px,1px)}50%{transform:translate(2px,-1px)}75%{transform:translate(-1px,-2px)}}
+.a-wave .fx{animation:wave 2.4s ease-in-out infinite;transform-origin:50% 100%}
+.en-rotate{animation-name:erot}@keyframes erot{from{opacity:0;rotate:-360deg}}
+.en-scale{animation-name:escl}@keyframes escl{from{opacity:0;scale:.6}}
 `;
 document.getElementById("rt-css").textContent=RT_STYLES;
