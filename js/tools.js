@@ -13,3 +13,6 @@ function marq(ev){var r0=$('st').getBoundingClientRect(),x0=(ev.clientX-r0.left)
 $('P').addEventListener('click',function(ev){var d=ev.target.dataset;if(d.act){({grp:function(){grp(1)},ungrp:function(){grp(0)},dp:dup,dl:del})[d.act]();return}
  if(d.ma){var L=S().els.filter(function(x){return ms.indexOf(x.id)>-1}),x0=Math.min.apply(0,L.map(function(x){return x.x})),x1=Math.max.apply(0,L.map(function(x){return x.x+x.w})),y0=Math.min.apply(0,L.map(function(x){return x.y})),y1=Math.max.apply(0,L.map(function(x){return x.y+x.h}));L.forEach(function(x){var a=d.ma;if(a==='l')x.x=x0;if(a==='c')x.x=Math.round((x0+x1-x.w)/2);if(a==='r')x.x=x1-x.w;if(a==='t')x.y=y0;if(a==='m')x.y=Math.round((y0+y1-x.h)/2);if(a==='b')x.y=y1-x.h});commit();drawStage()}});
 $('C').onpointerdown=function(ev){if(ev.target.id==='C'||ev.target.id==='sw'){sel=null;drawAll()}};
+
+$('P').addEventListener('click',function(ev){var r=ev.target.closest('.tlr');if(r){sel=r.dataset.id;ms=[sel];drawAll();return}
+ if(ev.target.id==='tlp')S().els.forEach(function(e){var n=$('st').querySelector('[data-id="'+e.id+'"]');if(!n||!e.enter||e.enter==='none')return;n.classList.remove('en-'+e.enter);void n.offsetWidth;n.classList.add('en-'+e.enter)})});
